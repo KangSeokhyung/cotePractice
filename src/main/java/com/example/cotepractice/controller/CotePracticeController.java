@@ -49,4 +49,39 @@ public class CotePracticeController {
     public String problem5(){
         return coteService.problem5();
     }
+
+    @GetMapping("/problem6")
+    @Operation(summary = "프로그래머스 덧셈식 출력하기", description = "정수 a,b를 입력받아 4 + 5 = 9 를 만드세요")
+    public String problem6(
+            @Parameter(description = "입력받을 문자열") @RequestParam int a, int b) {
+        return coteService.problem6(a, b);
+    }
+
+    @GetMapping("/problem7")
+    @Operation(summary = "문자열 붙여서 출력하기", description = "")
+    public String problem7(
+            @Parameter(description = "입력받을 문자열") @RequestParam String a, String b) {
+        return coteService.problem7(a, b);
+    }
+
+    @GetMapping("/problem8")
+    @Operation(summary = "문자열 돌리기", description = "")
+    public String problem8(
+            @Parameter(description = "입력받을 문자열") @RequestParam String a) {
+        return coteService.problem8(a);
+    }
+
+    @GetMapping("/problem9")
+    @Operation(summary = "홀짝 구분하기", description = "")
+    public String problem9(
+            @Parameter(description = "입력받을 문자열") @RequestParam int a) {
+        return coteService.problem9(a);
+    }
+
+    @GetMapping("/problem10")
+    @Operation(summary = "문자열 겹쳐쓰기", description = "")
+    public String problem10(
+            @Parameter(description = "입력받을 문자열") @RequestParam String a, String b, int s) {
+        return coteService.problem10(a,b,s);
+    }
 }

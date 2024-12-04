@@ -65,4 +65,57 @@ public class CoteService {
 
         return rtn_string;
     }
+
+    // 문제6. 덧셈식 출려
+    public String problem6(int a, int b) {
+        int sum = 0;
+        String rtn_string = "";
+
+        sum = a + b;
+
+        rtn_string = a + " + " + b + " = " + sum;
+
+        return rtn_string;
+    }
+
+    // 문제7. 문자열 붙여서 출력
+    public String problem7(String a, String b) {
+        String rtn_string = "";
+        String c = a + b;
+        rtn_string = c.replace(" ", "");
+        return rtn_string;
+    }
+
+    // 문제8. 문자열 돌리기
+    public String problem8(String a) {
+        String rtn_string = "";
+        for(int i = 0 ; i < a.length(); i++ ){
+            rtn_string += (a.charAt(i) + "\n");
+        }
+        return rtn_string;
+    }
+
+    // 문제9. 홀짝 구분하기
+    public String problem9(int n) {
+        String rtn_string = "";
+        if(n%2 == 1){
+            rtn_string = n + " is odd";
+        }else{
+            rtn_string = n + " is even";
+        }
+        return rtn_string;
+    }
+
+    // 문제10. 문자열 겹쳐쓰기
+    public String problem10(String a, String b, int s) {
+        String rtn_string = "";
+
+        rtn_string = a.substring(0, s) + b;
+
+        if(a.length() > rtn_string.length()){
+            rtn_string += a.substring(rtn_string.length(), a.length());
+        }
+
+        return rtn_string;
+    }
 }
