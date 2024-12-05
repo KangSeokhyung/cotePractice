@@ -118,4 +118,34 @@ public class CoteService {
 
         return rtn_string;
     }
+
+    // 문제12. 문자열 겹쳐쓰기
+    public String problem12(String[] arr) {
+        String answer = "";
+
+        for(int i = 0; i < arr.length; i ++){
+            answer += arr[i];
+        }
+
+        return answer;
+    }
+
+    // 문제13. 문자열 겹쳐쓰기
+    public int problem13(int a, int b) {
+        int answer = 0;
+        String strA = String.valueOf(a);
+        String strB = String.valueOf(b);
+        String strSumAB = strA + strB;
+        String strSumBA = strB + strA;
+
+        if(Integer.parseInt(strSumAB) > Integer.parseInt(strSumBA)){
+            answer = Integer.parseInt(strSumAB);
+        }else if(Integer.parseInt(strSumAB) < Integer.parseInt(strSumBA)){
+            answer = Integer.parseInt(strSumBA);
+        }else{
+            answer = Integer.parseInt(strSumAB);
+        }
+
+        return answer;
+    }
 }
